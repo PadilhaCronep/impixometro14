@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STF Inpixometer - Monitoramento Institucional</title>
+    
+    <!-- Metadados de Compartilhamento (Twitter Cards & Open Graph) -->
+    <meta name="description" content="Plataforma de monitoramento de integridade institucional e percepção pública do STF.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Aludydias">
+    <meta name="twitter:title" content="STF Inpixômetro">
+    <meta name="twitter:description" content="Eu votei no Inpixômetro, vote você também. Acompanhe a pressão institucional em tempo real.">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1ld8LyI2YdeLhedyxFC45gH4bHkF-OwDE">
+    <meta name="twitter:url" content="https://aludydias.com.br/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STF Inpixômetro">
+    <meta property="og:description" content="Plataforma interativa de monitoramento cívico. Participe do termômetro popular.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1ld8LyI2YdeLhedyxFC45gH4bHkF-OwDE">
+    <meta property="og:url" content="https://aludydias.com.br/">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F9CC18',
+                        brandBlack: '#000000',
+                        brandWhite: '#FFFFFF',
+                        alertRed: '#EF4444',
+                        stableGreen: '#22C55E',
+                        warningYellow: '#FBBF24'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .grayscale-hover:hover {
+            filter: grayscale(0%);
+        }
+        .grayscale-default {
+            filter: grayscale(100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .mask-fade-edges {
+            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F9CC18;
+            border-radius: 4px;
+        }
+
+        /* MOBILE-ONLY POLISH (STRICTLY < 1024px) */
+        @media (max-width: 1023px) {
+            .mobile-snap-x {
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+            .mobile-snap-center {
+                scroll-snap-align: center;
+            }
+            .transition-mobile {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            button, a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .mobile-px {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            h1 { line-height: 0.9 !important; letter-spacing: -0.05em !important; }
+            .font-heading { letter-spacing: -0.02em; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
