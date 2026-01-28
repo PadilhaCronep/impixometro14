@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { Senator, Alignment } from '../types';
+import { Senator, Alignment } from './types';
 // Fixed: Import NORMALIZED_SENATORS from senatorData instead of non-existent SENATORS from constants
-import { NORMALIZED_SENATORS } from '../senatorData';
+import { NORMALIZED_SENATORS } from './senatorData';
 
 interface SenateMapProps {
   selectedJusticeId: string;

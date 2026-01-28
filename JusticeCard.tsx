@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Justice, PressureStatus, SenateSupport, VoteData } from '../types';
+import { Justice, PressureStatus, SenateSupport, VoteData } from './types';
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 interface JusticeCardProps {

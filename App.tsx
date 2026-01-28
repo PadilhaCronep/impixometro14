@@ -2,14 +2,14 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { JUSTICES } from './constants';
 import { Justice, VoteData } from './types';
-import JusticeCard from './components/JusticeCard';
-import DualMeterSystem from './components/DualMeterSystem';
-import InteractionModule from './components/InteractionModule';
-import SenateCompositionMap from './components/SenateCompositionMap';
-import LeadWall from './components/LeadWall';
-import NewsSection from './components/NewsSection';
-import ShareButton from './components/ShareButton';
-import ProjectCredits from './components/ProjectCredits';
+import JusticeCard from './JusticeCard';
+import DualMeterSystem from './DualMeterSystem';
+import InteractionModule from './InteractionModule';
+import SenateCompositionMap from './SenateCompositionMap';
+import LeadWall from './LeadWall';
+import NewsSection from './NewsSection';
+import ShareButton from './ShareButton';
+import ProjectCredits from './ProjectCredits';
 
 const SYNC_POST_URL = "https://script.google.com/macros/s/AKfycbzuNkYdkNllvPvzuEAixiE-K7kn3TdsiK-igPg8yDbEBSl3I-iEyRldHhUhxdjF9PrZtA/exec";
 const FETCH_GET_URL = "https://script.google.com/macros/s/AKfycbxvFulGsFoGFtuwmthkWh9-PQEQXBcs0DXEPprJOT73Lnt8nkfs5u615FwsfH2YTKwKzA/exec";
