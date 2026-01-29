@@ -124,21 +124,28 @@
         </div>
     </noscript>
 <script type="module">
-    import './index.tsx';
+    const renderBootstrapError = (details) => {
+        const root = document.getElementById('root');
+        if (root) {
+            root.innerHTML = `
+              <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;padding:24px;text-align:center;">
+                <div>
+                  <h1 style="font-size:20px;margin-bottom:8px;">Falha ao carregar</h1>
+                  <p style="font-size:14px;opacity:0.8;">O JavaScript não foi carregado. Em produção, envie a pasta <strong>dist/</strong> (build) para o servidor.</p>
+                  ${details ? `<pre style="margin-top:12px;font-size:11px;opacity:0.8;background:#111;padding:8px;border-radius:4px;">${details}</pre>` : ''}
+                </div>
+              </div>
+            `;
+        }
+    };
+
+    import('./index.tsx').catch((error) => {
+        renderBootstrapError(error?.message || 'Falha ao importar index.tsx');
+    });
 
     setTimeout(() => {
         if (!window.__APP_MOUNTED__) {
-            const root = document.getElementById('root');
-            if (root) {
-                root.innerHTML = `
-                  <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;padding:24px;text-align:center;">
-                    <div>
-                      <h1 style="font-size:20px;margin-bottom:8px;">Falha ao carregar</h1>
-                      <p style="font-size:14px;opacity:0.8;">O JavaScript não foi carregado. Verifique erros 404/MIME na aba Network.</p>
-                    </div>
-                  </div>
-                `;
-            }
+            renderBootstrapError('App não montou após 5s. Verifique erros 404/MIME na aba Network.');
         }
     }, 5000);
 </script>
