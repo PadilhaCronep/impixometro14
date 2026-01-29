@@ -123,8 +123,9 @@
             </div>
         </div>
     </noscript>
-<script type="module" src="./index.tsx"></script>
-<script>
+<script type="module">
+    import './index.tsx';
+
     setTimeout(() => {
         if (!window.__APP_MOUNTED__) {
             const root = document.getElementById('root');
