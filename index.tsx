@@ -4,6 +4,12 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import ErrorBoundary from './ErrorBoundary';
 
+declare global {
+  interface Window {
+    __APP_MOUNTED__?: boolean;
+  }
+}
+
 const rootElement = document.getElementById('root');
 const showFatalError = (message: string) => {
   if (!rootElement) {
@@ -41,4 +47,6 @@ if (!rootElement) {
       </ErrorBoundary>
     </React.StrictMode>
   );
+
+  window.__APP_MOUNTED__ = true;
 }
