@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Justice, SenateSupport, PoliticalAlignment } from '../types';
+import { Justice, SenateSupport, PoliticalAlignment } from './types';
 import ShareButton from './ShareButton';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 

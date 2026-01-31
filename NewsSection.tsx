@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Justice, NewsItem } from '../types';
-import { NEWS_DATA } from '../constants';
+import { Justice, NewsItem } from './types';
+import { NEWS_DATA } from './constants';
 
 interface NewsSectionProps {
   selectedJustice: Justice;

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { VoteData } from '../types';
+import { VoteData } from './types';
 
 interface InteractionModuleProps {
   justiceName: string;

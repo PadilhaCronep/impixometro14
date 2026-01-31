@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Ensure correct MIME types for JS modules
+AddType application/javascript .js .mjs
+
+# SPA fallback: send all requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

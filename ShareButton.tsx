@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Justice } from '../types';
+import { Justice } from './types';
 
 interface ShareButtonProps {
   justice: Justice;

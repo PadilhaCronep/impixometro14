@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { NORMALIZED_SENATORS } from '../senatorData';
-import { Senator } from '../types';
+import { NORMALIZED_SENATORS } from './senatorData';
+import { Senator } from './types';
 
 const SenateCompositionMap: React.FC = () => {
   const [selectedSen, setSelectedSen] = useState<Senator | null>(null);

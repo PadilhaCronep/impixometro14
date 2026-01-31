@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Justice, SenateSupport } from '../types';
+import { Justice, SenateSupport } from './types';
 
 interface ResultSummaryProps {
   justice: Justice;
